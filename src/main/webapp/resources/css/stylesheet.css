@@ -1,0 +1,479 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : May 8, 2015, 9:21:17 AM
+    Author     : ubuntu
+*/
+
+html,body{
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+}
+body{
+    background: #E0E0E0 ;
+    overflow: auto;
+}
+h1, h2, h3, h4, h5, h6,p,a{
+    font-family: Helvetica, Verdana, sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+#wrapper{
+    position: relative;
+    margin:auto;
+    width: 960px;
+
+    background: #fff;
+}
+header{
+    width: 960px;
+    height: 150px;
+    margin: 0 auto;
+    background:url('../images/banner.png') no-repeat;
+}
+nav{
+    width: 100%;
+    height: 50px;
+    margin: 20;
+    background: #2199b2;
+}
+nav .right{
+    display: inline;
+    float: right;
+    margin: 5px;
+}
+nav .left h4{
+    float: left;
+    margin: 15px 0 0 10px;
+}
+nav input[type=submit]{
+    background: transparent;
+    color: #fff;
+    border-radius: 3px;
+    font-size: 1em;
+    height: 40px;
+    padding: 5px 35px;
+    border: 1px solid #F8F8F8;  
+}
+nav input[type=text]{
+    width: 350px;
+    font-size: 12pt;
+    padding: 0px;
+    margin: 0 auto 10px auto;
+    height: 37px;
+    border-radius: 5px;
+
+}
+section{
+    position: relative;
+    width: 550px;
+    margin: 0;
+    padding: 10px;
+    float: left;
+}
+aside{
+    position: relative;
+    float: right;
+    width: 340px;
+    margin: 0;
+    padding: 10px;
+    /*    border-left: 1px solid #000;*/
+}
+aside ul{
+    list-style-type:square;
+    color:#FF3E96;
+    margin: 0;
+    padding-left: 0;
+}
+/*aside ul > li:hover {
+    color:#990033;
+    
+}*/
+aside li.listItem{
+    position: relative;
+    padding-top: 10px;
+    padding-left: 10px;
+    text-align: left;
+    margin-left: 12px;
+    /*border: 1px solid #000;*/
+} 
+aside li a{
+    text-decoration-style: dotted;
+    color: #000;
+}
+aside li a:hover{
+    text-decoration: none;
+    color:#990033;
+}
+aside li a:active{
+    color: #12e231;
+}
+aside li a:after{
+    color: #9b2123;
+}
+#post{
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 10px;
+}
+.avata img{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    margin: 0;
+}
+.name h4{
+    position: absolute;
+    top: 0px;
+    left: 60px;
+    margin: 10px;
+}
+.name h6{
+    position: absolute;
+    top: 30px;
+    left: 60px;
+    margin: 10px;
+}
+.title h4{
+    margin: 0px auto 10px 60px;
+}
+.content p{
+    margin: 10px auto 10px 60px;
+}
+.content h4{
+    margin: 10px auto 0px 60px;
+}
+.content h6{
+    margin: 0px auto 0px 60px;
+    color: #f10808;
+}
+.content input[type=button].readMore{
+    width: 114px;
+    height: 30px;
+    margin: 10px auto 0px 60px;
+    color: #9b2123;
+}
+.content input[type=button].buy{
+    width: 114px;
+    height: 30px;
+    margin: 0px;
+    color: #9b2123;
+}
+
+.content input[type=button].wishList{
+    width: 114px;
+    height: 30px;
+    margin: 0px;
+    color: #9b2123;
+}
+.picture img{
+    position: relative;
+    margin: 10px;
+    width: 350px;
+    height: 350px;
+    margin: 10px auto 0px 50px;
+    padding: 10px;
+}
+
+#comment{
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 10px;
+}
+.addCommentAction{
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 10px; 
+}
+.commentByAvata img{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    margin: 0px auto 10px 50px;
+    padding: 0px;
+}
+.commentByName h4{
+    position: absolute;
+    top: 5px;
+    left: 120px;
+    margin: 0;
+}
+.commentByName h6{
+    position: absolute;
+    top: 20px;
+    left: 120px;
+    margin-top: 10px;
+}
+.commontText p{
+    position: absolute;
+    left: 120px;
+    top: 35px;
+    margin: 0;
+    padding-top: 10px; 
+}
+.addComment input[type=submit]{
+    position: relative;
+    width: 200px;
+    height: 40px;
+    margin: 10px auto 0px 50px;
+    padding: 0px;
+}
+.addCommentText input[type=text]{
+    position: relative;
+    width: 400px;
+    height: 40px;
+    margin: 10px auto 0px 50px;
+    padding: 0px;
+}
+#addPost{
+    position: relative;
+    widows: 100%;
+    height: 100px;
+}
+#addPost input[type=text]{
+    width: 100%;
+    height: 50px;
+    padding-left: 10px;
+}
+#addPost input[type=submit]{
+    width: 100px;
+    height: 30px;
+    margin: 10px -15px auto;
+    float: right;
+}
+
+/*register page*/
+div.panes {
+    position: relative;
+    margin: 0;
+    width: 100%;
+    font-size: 0;
+}
+div.pane {
+    display: inline-block;
+    box-sizing: border-box;
+    margin: 30px 0px;
+    padding: 0px 20px;
+    font-size: 16pt;
+    overflow-x: hidden;
+    overflow: visible;
+    vertical-align: top;
+    min-height: 500px;
+}
+div.pane.left{
+    width: 50%;
+}
+div.pane.left span.errorLogin{
+    margin: 0px 50px 0px;
+    float: right;
+    color: #f10808;
+    font-family: Helvetica, Verdana, sans-serif;
+    font-size: 12pt;
+}
+div.pane.left h4{
+    font-family: sans-serif;
+    margin: 0px 50px auto;
+    float: right;
+    padding: 0;
+}
+div.pane.left label{
+    font-family: sans-serif;
+    font-size: 12pt;
+    margin: 0px 50px auto;
+    float: right;
+    padding: 0;
+}
+div.pane.left input[type=text]{
+    width: 450px;
+    height: 30px;
+    float: right;
+    margin: 0px 50px auto;
+}
+div.pane.left input[type=password]{
+    width: 450px;
+    height: 30px;
+    float: right;
+    margin: 0px 50px auto;
+}
+div.pane.left input[type=submit]{
+    width: 150px;
+    height: 40px;
+    float: right;
+    margin: 20px 50px auto;
+    padding: 0;
+    font-size: 14pt;
+}
+div.pane.right{
+    width: 50%;
+    border-left: 1px dotted #4A96AD;
+}
+div.pane.right h4{
+    font-family: sans-serif;
+    margin: 0px auto 0 50px;
+    padding: 0;
+}
+div.pane.right label{
+    font-family: sans-serif;
+    font-size: 12pt;
+    margin: 0px auto 0 50px;
+    padding: 0;
+}
+div.pane.right input[type=text]{
+    width: 460px;
+    height: 30px;
+    margin: 0px auto 0 50px;
+}
+div.pane.right input[type=text].name{
+    width: 220px;
+    height: 30px;
+    margin: 0px auto 0 50px;
+}
+div.pane.right input[type=text].last.name{
+    width: 220px;
+    height: 30px;
+    margin: 0px;
+}
+div.pane.right input[type=password]{
+    width: 460px;
+    height: 30px;
+    margin: 0px auto 0 50px;
+}
+div.pane.right input[type=file]{
+    width: 260px;
+    height: 40px;
+    margin: 10px auto 0px 50px;
+    font-size: 12pt;
+}
+div.pane.right input[type=radio]{
+    margin: 10px;
+    font-family: sans-serif;
+}
+div.pane.right select.month{
+    height: 30px;
+    margin:0px auto 0px 50px;
+    font-size: 12pt;
+}
+div.pane.right select.day{
+    height: 30px;
+    margin: 0px;
+    font-size: 12pt;
+}
+div.pane.right select.year{
+    height: 30px;
+    margin: 0px;
+    font-size: 12pt;
+}
+div.pane.right input[type=submit]{
+    width: 150px;
+    height: 40px;
+    float: left;
+    margin: 10px auto 0 50px;
+    padding: 0;
+    font-size: 14pt;
+}
+/*post page*/
+div.pane.right textArea{
+    width: 460px;
+    margin: 0px auto 0 50px;
+}
+div.pane.right label.category{
+    width: 220px;
+    height: 30px;
+    margin: 10px 20px 0 50px;
+}
+div.pane.right select.category{
+    width: 220px;
+    height: 30px;
+    margin: 10px;
+    font-size: 12pt;
+}
+
+/*table style*/
+
+table {
+    color: #333;
+    font-family: sans-serif;
+    font-size: .6em;
+    font-weight: 300;
+    text-align: left;
+    line-height: 30px;
+    border-spacing: 0;
+    border: 1px solid #428bca;
+    margin: 30px 50px auto;
+    float: right;
+}
+
+thead tr:first-child {
+    background: #428bca;
+    color: #fff;
+    border: none;
+}
+
+th {font-weight: bold;}
+th:first-child, td:first-child {padding: 0 15px 0 10px;}
+thead tr:last-child th {border-bottom: 2px solid #ddd;}
+tbody tr:hover {background-color: #f0fbff;}
+tbody tr:last-child td {border: none;}
+tbody td {border-bottom: 1px solid #ddd;}
+
+td:last-child {
+    text-align: right;
+    padding-right: 10px;
+}
+td a.button {
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding:5px 10px 5px 10px;
+    border-radius: 5px;
+}
+td a.start{
+    background:#00FF00;
+}
+td a.delete{
+    background:#FF0000;
+}
+td a.button:hover{
+    text-decoration:none;
+    background:#0000FF;
+}
+.button:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+#cont{
+    margin:auto;
+}
+input[type=text].textfieldTable {
+    border: 1px solid #ccc;
+    border: 1px solid #ccc;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    border-radius: 4px;
+    float: right;
+    margin: 10px 10px auto;
+    width: 200px;
+    height: 40px;
+    padding-left: 15px;
+}
+#btn input[type=submit] {
+    display: inline;
+    background: #000033;
+    border:none;
+    color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
+    text-transform: uppercase;
+}
